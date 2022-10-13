@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css">
+</head>
+<body>
+    <div class="jumbotrot">
+        <div class="container">
+            <h1>{% include 'mainApp/includes/some_html.html' %}</h1>
+            {% block content %}
+	        {% endblock %}
+            <p>
+                <a href="/" class="btn btn-success btn-lg">Main page</a>
+                <a href="/news" class="btn btn-primary btn-lg">Weekly forecast</a>
+                <a href="/contact" class="btn btn-info btn-lg">Weather station contacts</a>
+            </p>
+        </div>
+    </div>
+    <div class="container">
+<!--        <img src="{static 'mainApp/news.png'}" class="img-thumbnail">-->
+        <img alt='gif' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzZYMIFPj4mUswR_vcP69QNU3bnju_dOcr-Ap45yKx_yOwIvtYEiZaLgZS6d5Jem6kB-8&usqp=CAU" class="img-thumbnail" width="700">
+    </div>
+</body>
+</html>
